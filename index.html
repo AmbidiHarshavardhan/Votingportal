@@ -39,7 +39,7 @@
 		var t = confirm("Are the details which you have provided are valid?");
 		if(t&&parseInt(b)>=18)
 		{
-			alert("You can vote");
+			swal("You can vote");
 			window.prompt("Enter anything to vote");
 		}	
 		else
@@ -48,7 +48,7 @@
 		}
 	if(a&&b&&c&&d&&e)
 	{
-		window.alert("Thanks for voting.Your vote registered.");
+		swal("Thanks for voting.Your vote registered.");
 	}
     else
     {
