@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name=”viewport” content=”width=device-width, initial-scale=1″>
+	<title>Voting Site(Basic)</title>
+	<style type="text/css">
+		body {
+			background: url(votebg.jpg);
+			background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+		}
+		h1 {
+			color: yellow;
+			font-family: cursive;
+            text-decoration-style: dotted;
+			border: solid;
+			border-color: red;
+			padding: 20px;
+			border-width: 5px;
+		}
+		strong {
+			font-family: fantasy;
+		}
+	</style>
+</head>
+<script type="text/javascript">
+	function display() {
+		alert("Fill out this Voting form");
+	}
+	function disPrompt() {
+		var a= document.f1.a1.value;
+		var b= document.f1.a2.value;
+		var c= document.f1.a3.value;
+		var d= document.f1.a4.value;
+		var e= document.f1.a5.value;
+		var t = confirm("Are the details which you have provided are valid?");
+		if(t&&parseInt(b)>=18)
+		{
+			alert("You can vote");
+			window.prompt("Enter anything to vote");
+		}	
+		else
+		{
+			alert("You are not eligible");
+		}
+	if(a&&b&&c&&d&&e)
+	{
+		alert("Thanks for voting.Your vote registered.");
+		exit;
+	}
+    else
+    {
+    	window.alert("Fill the details again");
+    }
+	}
+</script>
+<body onload="display()">
+	<h1><center>VOTING PORTAL</center></h1>
+	<form name="f1">
+		<ol><h4>	
+		<li>Name : <input type="text" name="a1" placeholder="Enter your name" required=""></li><br>
+		<li>Age : <input type="number" name="a2"></li><br>
+		<li>D.O.B : <input type="date" name="a3"></li><br>
+		<li>Email : <input type="email" name="a4" placeholder="Enter your email"></li><br>
+		<li>Add your picture :<br><br>
+		<input type="file" name="a5" placeholder="Choose your picture"></li><br>
+	<li>Vote for your university : <br>
+	<input type="radio" name="university"><img src="jntu.jpg"><br>          JNTU<br>
+	<input type="radio" name="university"><img src="gitam.jpg"><br>         GITAM</h4></li>
+</ol>
+		<input type="submit" onclick="disPrompt()">
+	</form>
+</body>
+</html>
