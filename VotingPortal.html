@@ -44,9 +44,9 @@
 		else
 		{
 			alert("You are not eligible");
-			e = new Boolean(false);
+			e = false;
 		}
-	if(a&&b&&c&&d&&e)
+	if(e)
 	{
 		alert("Thanks for voting.Your vote registered.");
 		exit;
@@ -62,14 +62,14 @@
 	<form name="f1">
 		<ol><h4>	
 		<li>Name : <input type="text" name="a1" placeholder="Enter your name" required=""></li><br>
-		<li>Age : <input type="number" name="a2"></li><br>
-		<li>D.O.B : <input type="date" name="a3"></li><br>
-		<li>Email : <input type="email" name="a4" placeholder="Enter your email"></li><br>
+		<li>Age : <input type="number" name="a2" required></li><br>
+		<li>D.O.B : <input type="date" name="a3" required></li><br>
+		<li>Email : <input type="email" name="a4" placeholder="Enter your email" required></li><br>
 		<li>Add your picture :<br><br>
-		<input type="file" name="a5" placeholder="Choose your picture"></li><br>
+		<input type="file" name="a5" placeholder="Choose your picture" required></li><br>
 	<li>Vote for your university : <br>
-	<input type="radio" name="university"><img src="jntu.jpg"><br>
-	<input type="radio" name="university"><img src="gitam.jpg"></h4></li>
+	<input type="radio" name="a6"><img src="jntu.jpg"><br>
+	<input type="radio" name="a6"><img src="gitam.jpg"></h4></li>
 </ol>
 		<input type="submit" onclick="disPrompt()">
 	</form>
